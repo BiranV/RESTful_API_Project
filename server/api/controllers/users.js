@@ -3,6 +3,7 @@ const bcrypt = require('bcrypt');
 const User = require('../models/user');
 
 module.exports = {
+    
     signup: (req,res) => {
         const {email,password} = req.body;
 

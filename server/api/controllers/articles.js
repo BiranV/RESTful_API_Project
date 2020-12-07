@@ -16,14 +16,14 @@ module.exports = {
     },
     creatArticle: (req,res) => {
         const {path: image} = req.file;
-        const {name, age, sex, location} = req.body;
+        const {firstName, lastName, age, gender} = req.body;
 
         const article = new Article({
             _id: new mongoose.Types.ObjectId(),
-            name,
+            firstName,
+            lastName,
             age,
-            sex,
-            location,
+            gender,
             image: image.replace("\\","/")
         });
 

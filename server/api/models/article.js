@@ -2,13 +2,25 @@ const mongoose = require("mongoose");
 
 const articleSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,   //mongoose will generate a unique string 
-    firstName: String,
-    lastName: String,
-    age: Number,
-    gender: String,
-    email: String,
-    password: String,
-    image: String
+    firstName: {
+    type: String,
+    require: true
+    },
+    lastName: { 
+        type: String,
+        require: true
+        },
+    age: {
+        type: Number,
+        require: true
+        },
+    gender: {
+        type: String,
+        require: true
+        },
+    image: {
+        type: String,
+        }
 
 });
 
